@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: 'TimesNewRoman', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #eae7dc;
+            color: #333;
+        }
+    
+        h1 {
+            position: relative;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #124e66, #748d92);
+            color: white;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+            text-transform: uppercase;
+            font-size: 1.8em;
+        }
+    
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+    
+        nav a:hover {
+            color: #ffcc00;
+        }
+    
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+    
+        .form-row label {
+            font-weight: bold;
+            flex: 1;
+            min-width: 100px;
+        }
+    
+        .form-row input, .form-row select, .form-row textarea {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+    
+        .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+        }
+    
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+    
+        ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+    
+        button {
+            background: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        button:hover {
+            background: #2575fc;
+        }
+    
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        textarea {
+            width: 100%;
+            min-height: 100px;
+        }
+    
+        .email-section input {
+            margin-top: 10px;
+            width: calc(100% - 10px);
+        }
+    
+        @media (max-width: 768px) {
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+    
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+    
+            nav a {
+                margin: 0 8px;
+            }
+        }
+        footer {
+    background-color: #e85a4f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 2px solid;
+}
+
+footer .declaration-section {
+    margin: 10px 0;
+}
+
+footer .declaration-section p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+footer .email-section {
+    margin-top: 15px;
+}
+
+footer .email-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: white;
+}
+
+footer .email-section input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+footer .email-section input[type="email"]:focus {
+    border-color: #6a11cb;
+    outline: black;
+}
+legend {
+    font-weight: bold; 
+    font-size: 1.2em; 
+    text-align: center; 
+    display: inline-block; 
+    padding: 0 10px; 
+    color: #333;
+    background: #e6f3ff; 
+    border-radius: 5px; 
+}
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to My Homepage</h1>
+
+    <section id="personal-info">
+        <form>
+            <fieldset>
+                <legend><strong>Personal Info</strong></legend>
+<div class="form-section">
+        <form>
+            <p class="big">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="m_initial">Middle Initial:</label>
+                <input type="text" id="m_initial" name="m_initial" required>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="country">I am from:</label>
+                <select id="country" name="country" required>
+                    <option value="USA">USA</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India">India</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="matriculation">Matriculation:</label>
+                <input type="text" id="matriculation" name="matriculation" required>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="semester">Semester:</label>
+                <input type="number" id="semester" name="semester" required>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="program">Program:</label>
+                <select id="program" name="program" required>
+                    <option value="Media">Cyber security</option>
+                    <option value="Add">Big data</option>
+                </select>
+            </p>
+            </div>
+
+            <div class="form-row">
+                <label for="start_date">Started In:</label>
+                <input type="date" id="start_date" name="start_date" required>
+                <div class="form-row" style="justify-content: center;">
+            </div>
+            </p>
+            </div>
+            </p>
+            
+            
+        <p><strong>I’ve heard this graduate program from:</strong></p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="source" value="Media"> Media</label>
+            <label><input type="checkbox" name="source" value="Add"> Add</label>
+            <label><input type="checkbox" name="source" value="Agency"> Agency</label>
+            <label><input type="checkbox" name="source" value="Other"> Other</label>
+
+                <div class="form-section">
+        <p><strong>When I finish my study, I will:</strong></p>
+        <div class="radio-group">
+            <label><input type="radio" name="post_study_plan" value="Return to my country" required> Return to my country</label>
+            <label><input type="radio" name="post_study_plan" value="Find a job in Europe"> Find a job in Europe</label>
+            <label><input type="radio" name="post_study_plan" value="Do practical training and then decide"> Do the practical training and then decide</label>
+        </div>
+        <p><strong>Feedback for the course:</strong></p>
+        <div class="feedback-group">
+        
+            <textarea>My feedback for this course is that it’s a great way to start learning software development. It’s designed in a simple and beginner-friendly way, making it easy to follow along. The mix of lessons and practical exercises helps to really understand the topics. Solving the homeworks given by the professor made the topics easier to understand.</textarea>
+        </div>
+    </div>
+    </fieldset>
+        </form>
+    </section>
+
+    <section id="sdlc">
+        <h2>SDLC Methodologies</h2>
+    <div class="content">
+               <font size="5"><p>I will write a paragraph for each methodology of SDLC. There are many of them, but I will suggest a few. My suggestions and reasons are as follows:</p>
+        </font size>
+        <ul><font size="4">
+            <li><strong>Waterfall Model:</strong> A step-by-step process where each phase must be completed before moving to the next. It's great for projects with well-defined requirements. This is a linear and sequential method, ideal for projects with clearly defined requirements.</li>
+            <li><strong>Agile Model:</strong> An iterative and flexible approach that focuses on collaboration and customer feedback. It's best for dynamic projects. This methodology emphasizes adaptability and collaboration.</li>
+            <li><strong>Scrum Framework:</strong> A subset of Agile, Scrum works in sprints to deliver high-quality products in short cycles. It encourages teamwork and adaptability.</li>
+            <li><strong>Kanban:</strong> A visual workflow methodology, ideal for managing work in progress and improving efficiency. A visual workflow tool that helps manage and improve work processes.</li>
+        </ul>
+        <p>Each of these methodologies has its strengths, and their application depends on the project’s nature and requirements. For example, Agile is great for projects needing frequent updates, while Waterfall works best when requirements are fixed upfront.</p></font size>
+    </div>
+    </section>
+
+<section id="agile">
+        <div class="content">
+        <h2>Agile SDLC Methodologies</h2>
+         <font size="5"><p>Among so many SDLC methodologies, those within the Agile classification are generally more effective for modern software development needs. Here are a few of the most recommended Agile SDLC methodologies:</p></font size>
+        <ul><font size="4">
+            <li>
+                <strong>A) Scrum:</strong> 
+                Scrum focuses on iterative development and teamwork. Work is divided into small, manageable pieces called sprints, each lasting 2-4 weeks. At the end of every sprint, a deliverable is produced, allowing for regular feedback and continuous improvement. This makes Scrum ideal for projects where requirements evolve over time.
+            </li>
+            <li>
+                <strong>B) Kanban:</strong> 
+                Kanban is a visual framework that helps teams manage workflow effectively. It emphasizes limiting work in progress (WIP) to avoid bottlenecks. Using a Kanban board, teams can visualize tasks and improve efficiency by identifying and addressing delays.
+            </li>
+            <li>
+                <strong>C) Extreme Programming (XP):</strong> 
+                XP encourages continuous collaboration with the customer and frequent releases. Developers work in pairs to ensure high-quality code, and practices like test-driven development (TDD) and refactoring are key components. It is best for projects requiring high-quality software in dynamic environments.
+            </li>
+            <li>
+                <strong>D) Feature-Driven Development (FDD):</strong> 
+                FDD focuses on building software in increments based on features. Teams work on specific features within a predefined timeline, ensuring that small parts of the software are completed and delivered frequently. This methodology emphasizes quality and efficiency.
+            </li></font size>
+        </ul>
+        <div class="course-section">
+            <font size="5"><p>In this software development and application course at <strong>SRH</strong>, we learned the following:</p>
+            </font size>
+            <ul><font size="3">
+                <li>
+                <strong>Here is a short overview of what we have learned in this SRH course:</strong>
+            <li>
+                <strong>Basic Computer Concepts and Programming</strong>
+                <ul>
+                    <li>Data, hardware, programming languages, variables, operations, and simple programs.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Software Development Overview</strong>
+                <ul>
+                    <li>SDLC methodologies (Agile, Waterfall), arrays, functions, pointers, and exercises.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Strings and Data Structures</strong>
+                <ul>
+                    <li>Structs, files, strings, regular expressions, and related exercises.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Data Structures</strong>
+                <ul>
+                    <li>Linked lists, stacks, queues, choosing data structures, and simple projects.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Object-Oriented Programming (OOP)</strong>
+                <ul>
+                    <li>Classes, objects, inheritance, Python/Java applications.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Web Development and Databases</strong>
+                <ul>
+                    <li>HTML, CSS, JavaScript basics, databases, and SQL.</li>
+                </ul>
+            </li>
+        </ol>
+                </li></font size>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="css">
+    <div class="content">
+        <h2>CSS and JavaScript in Web Development</h2>
+
+        <h3>Ways to Include CSS in a Webpage</h3>
+        <p>There are three ways to include CSS in a webpage:</p>
+        <ul>
+            <li>
+                <strong>a) Inline CSS:</strong> CSS styles are written directly within the HTML elements using the <code>style</code> attribute.
+                <p><em>Example:</em> <code>&lt;p style="color: blue;"&gt;This is a blue text.&lt;/p&gt;</code></p>
+            </li>
+            <li>
+                <strong>b) Internal CSS:</strong> CSS styles are written within a <code>&lt;style&gt;</code> tag inside the HTML document's <code>&lt;head&gt;</code> section. It is useful for styling a single HTML page.
+            </li>
+            <li>
+                <strong>c) External CSS:</strong> CSS styles are written in a separate file with the <code>.css</code> extension and linked to the HTML document using a <code>&lt;link&gt;</code> tag. It is the most efficient way to style multiple pages.
+            </li>
+        </ul>
+
+        <h3>Reasons for Using CSS in a Webpage</h3>
+        <p>CSS is used in a webpage for the following reasons:</p>
+        <ul>
+            <li>
+                <strong>1. Separation of Content and Design:</strong> CSS allows developers to keep the HTML focused on the structure and content, while CSS handles the visual design, making the code cleaner and easier to maintain.
+            </li>
+            <li>
+                <strong>2. Consistency Across Pages:</strong> By using CSS, the same styles can be applied to multiple pages, ensuring a consistent look and feel throughout the website.
+            </li>
+            <li>
+                <strong>3. Improved User Experience:</strong> CSS enables responsive designs and animations, making websites more interactive and visually appealing for users.
+            </li>
+        </ul>
+
+        <h3>Using JavaScript in Web Development</h3>
+        <p>JavaScript is also used extensively in web development. The main reasons are:</p>
+        <ul>
+            <li>
+                <strong>a) Adding Interactivity:</strong> JavaScript allows developers to create dynamic interactions, such as dropdown menus, sliders, and modals.
+            </li>
+            <li>
+                <strong>b) Form Validation:</strong> JavaScript is commonly used to validate user input in forms, such as checking if an email address is valid or if a required field is filled.
+            </li>
+            <li>
+                <strong>c) Updating Content Dynamically:</strong> With JavaScript, content on a webpage can be updated without reloading the entire page, using techniques like AJAX.
+            </li>
+            <li>
+                <strong>d) Handling Events:</strong> JavaScript can respond to user actions, such as clicking a button or hovering over an element.
+            </li>
+            <li>
+                <strong>e) Creating Visual Effects:</strong> JavaScript enables the creation of animations and visual effects, enhancing the user experience.
+            </li>
+        </ul>
+    </section>
+    <footer>
+    </div>
+         <div class="declaration-section">
+        <p>I’ve done this project myself and accept the consequences if found otherwise.</p>
+        <div class="email-section">
+            <label for="email">You can reach me at:</label>
+            <input type="email" id="email" size="30" name="email" value="yash.huligerimath@stud.srh-university.de" />
+        </div>
+    </div>
+</footer>
+</body>
+</html>
